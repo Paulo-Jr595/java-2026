@@ -1,6 +1,6 @@
 package basico;
 
-public class Basico {
+public class Repeticao {
     public static void main() {
         System.out.println("Lista de 1 a 10 ");
         for (int i=1;i<=10;i++) {
