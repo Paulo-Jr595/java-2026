@@ -1,4 +1,5 @@
 package basico;
+
 import java.util.Scanner;
 
 public class Decisao {
@@ -9,13 +10,13 @@ public class Decisao {
             System.out.print("Digite uma nota de 1 a 10 (Digite -1 para sair): ");
             nota = entrada.nextInt();
 
-            if (nota > -1 || nota < 10);{
+            if (nota < -1 || nota > 10) {
                 System.out.print("Valor inválido! Try Again.");
                 continue;
             }
 
-            if (nota ==-1){
-                System.out.print("Prgrama Encerrado");
+            if (nota == -1) {
+                System.out.print("Programa Encerrado");
                 break;
             }
             if (nota == 10) {
@@ -28,6 +29,6 @@ public class Decisao {
                 System.out.println("Reprovado");
 
             }
-        } while(nota!=-1);
+        } while (nota != -1);
     }
 }
