@@ -5,25 +5,34 @@ import javax.swing.*;
 public class TesteCalculadora {
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
-        calc.n1 = 40;
-        calc.n2 = 2;
-        System.out.println(calc.n1);
-        System.out.println(calc.n2);
-        System.out.println("Soma: " + calc.somar());
-        System.out.println("Divisão: " + calc.dividir());
-        System.out.println("Multiplicação: " + calc.multiplicar());
-        System.out.println("Subtração: " + calc.subtrair());
+
+        do {
+            String numero1 = JOptionPane.showInputDialog("Digite o primeiro numero: ");
+
+            String numero2 = JOptionPane.showInputDialog("Digite o segundo numero: ");
+
+            if (numero1 == null || numero2 == null) {
+                System.exit(0);
+            }
+
+            else if(numero1.trim().isEmpty() || numero2.trim().isEmpty()){
+                JOptionPane.showMessageDialog(
+                        null,
+                        "ERRO! Caracteres Invalidos - tente novamente!");
+            }
+
+             else {
+                double num1 = Double.parseDouble(numero1);
+                double num2 = Double.parseDouble(numero2);
 
 
-        calc.n1 = 20;
-        calc.n2 = 10;
-        calc.mostrarUltimoResultadoCalculado();
+                double total = calc.somar(num1, num2);
 
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Resultado: " + total);
 
-        JOptionPane.showMessageDialog(null, calc.mostrarUltimoResultadoCalculado());
-
-        System.out.println("123");
-
-
+            }
+        }while(true);
     }
 }
