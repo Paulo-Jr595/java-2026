@@ -22,5 +22,8 @@ public class TesteCalculadora {
 
         JOptionPane.showMessageDialog(null, calc.mostrarUltimoResultadoCalculado());
 
+        System.out.println("123");
+
+
     }
 }
