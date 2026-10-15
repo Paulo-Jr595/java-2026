@@ -5,6 +5,7 @@ public class Funcionario {
     private int idade;
     private double salario;
 
+    //Construtor normal.
     public Funcionario(){
         System.out.println("Objeto sendo criado....");
         this.nome = "";
@@ -12,7 +13,11 @@ public class Funcionario {
         this.salario = 0;
     }
 
+    //Construtor Parametrizado.
+    public Funcionario(String nome){
+        this.setNome(nome);
 
+    }
 
     public String getNome() {
         if (this.nome == null) {
