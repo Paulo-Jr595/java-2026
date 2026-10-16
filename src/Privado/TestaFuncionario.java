@@ -2,10 +2,11 @@ package Privado;
 
 public class TestaFuncionario {
     public static void main(String[] args){
-        Funcionario fulano = new Funcionario();
-        fulano.setNome("Fulano da Silva");
-        fulano.setIdade(43);
-        fulano.setSalario(4.501);
+        Funcionario fulano = new Funcionario(
+                "Fulano da Silva",
+                40,
+                1234.56
+        );
 
         System.out.println("Nome: " + fulano.getNome());
         System.out.println("Idade: " + fulano.getIdade());

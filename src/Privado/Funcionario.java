@@ -14,8 +14,10 @@ public class Funcionario {
     }
 
     //Construtor Parametrizado.
-    public Funcionario(String nome){
+    public Funcionario(String nome, int idade, double salario){
         this.setNome(nome);
+        this.setIdade(idade);
+        this.setSalario(salario);
 
     }
 
